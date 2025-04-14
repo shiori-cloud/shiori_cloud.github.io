@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tea_article.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(function(){
+           $("#purchase .quantity").on("input", function() {
+               var $item = $(this).closest(".item");
+               var quantity = $(this).val(); 
+               var price = $item.find(".price").text();
+
+                var subtotal = quantity * price; 
+
+                $item.find(".subtotal").text("¥" + subtotal); 
+
+
+                var total=0;
+                $(".item").each(function(){
+                    var subtotal=$(this).find(".subtotal").text().replace("¥","");
+                    total+=parseInt(subtotal,10)||0;
+                })
+                $(".total").text("¥"+total);        
+
+            })
+
+            $(".slider").bxSlider({
+                auto:"true",
+                mode:"fade",
+                pause:2000,
+                controls:false,
+                pager:false,
+                speed:2000
+            });
+
+
+
+        })
+    </script>
+</head>
+
+<body>
+
+<!-- ヘッダー -->
+<header>
+    <div class="logo"></div>
+    <nav>
+        <ul>
+            <li><a href="#">紅茶特集</a></li>
+            <li><a href="#selection">紅茶の種類</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#purchase">購入</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- メインイメージ -->
+ <div id="mainimage">
+    <div class="img"><img src="picture/mainimage.jpg" alt=""></div>
+    <div class="background"></div>
+    <div class="title">
+        <h1>今こそ見つめ直す、紅茶特集</h1>
+        <h2>あなたの一日を豊かにする紅茶体験</h2>
+    </div>
+ </div>
+
+<!-- スクロール -->
+ <div class="scroll">
+    <ul class="slider">
+        <li class="single">
+            <ul>
+                <li>
+                    <div class="img"><img src="picture/エメラルドモーニング.jpg" alt=""></div>
+                </li>
+                <li class=text>オススメはこちら！「エメラルドモーニング」※単品購入もできます</li>
+            </ul>
+        </li>
+
+        <li class="set">
+            <ul>
+                <li>
+                    <div class="img"><img src="picture/エメラルドモーニング.jpg" alt=""></div>
+                </li>
+                <li>
+                    <div class="img"><img src="picture/ミスティックムーンライト.jpg" alt=""></div>
+                </li>
+                <li>
+                    <div class="img"><img src="picture/グリーンヴィーナス.jpg" alt=""></div>
+                </li>
+                <li class=text>セットで購入でお得</li>
+                <li>
+                    <div class="img"><img src="picture/ゴールデンサンライズ.jpg" alt=""></div>
+                </li>
+                <li>
+                    <div class="img"><img src="picture/ワイルドフォレスト.jpg" alt=""></div>
+                </li>
+                <li>
+                    <div class="img"><img src="picture/シルクエンシャント.jpg" alt=""></div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+ </div>
+
+ <!-- コメント -->
+<div id="comment">
+    <h1 class="template">COMMENT</h1>
+    <div class="img">
+        <img src="comment_picture.jpg" alt="">
+    </div>
+    <div class="text">
+
+        <p>みなさま、こんにちは。光舟酒店の店主、田中です。<br><br>
+            コーヒー派の皆さん、紅茶の奥深さをご存知ですか？たまにハーブティーに挑戦したり、おうちにはダージリンが常備されている方々、お待たせしました！私たちの厳選した紅茶が、あなたの味覚を新たな旅に誘います。<br><br>
+        
+            ダージリンが好きだけど他の種類に手を出せない方、ハーブティーに挑戦したいけれど、何から始めたらいいかわからない方。そんなみなさまのために、私たちがおすすめする6種類の紅茶は、新しい世界への扉です。<br><br>
+        
+            おうちでリラックスしたいとき、友人を招いて楽しいひとときを過ごしたいとき、または自分へのちょっとしたご褒美として、光舟酒店の特集でお気に入りの紅茶を見つけてください。香り高いハーブティーや、上品なジャスミンなど、心と体を癒す特別な一杯を提供します。</p>
+    </div>
+    <div class="background"></div>
+</div>
+
+<!-- セレクション -->
+<div id="selection">
+    <div class="background"></div>
+    <h1 class="template">SELECTION</h1>
+    <ul>
+        <li class="1">
+            <div class="img"><img src="picture/エメラルドモーニング.jpg" alt=""></div>
+            
+            <div class="text">
+                <h1>エメラルドモーニング</h1>
+                <p> シリアルのような爽やかな香りと、明るくクリーンな味わいが特徴の朝の紅茶。</p>
+                <div class="container"></div>
+                <a href="#purchase" class="buttan">購入</a>
+            </div>
+        </li>
+
+
+        <li class="2">
+            <div class="img"><img src="picture/ミスティックムーンライト.jpg" alt=""></div>
+            <div class="text">
+                <h1>ミスティックムーンライト</h1>
+                <p>  ラベンダーやバニラのノートが漂う、夜の静かな時間にぴったりのリラックスできる紅茶。</p>
+                <div class="container"></div>
+                <a href="#purchase" class="buttan">購入</a>
+            </div>
+        </li>
+
+        <li  class="3">
+            <div class="img"><img src="picture/グリーンヴィーナス.jpg" alt=""></div>
+            <div class="text">
+                <h1>グリーンヴィーナス</h1>
+                <p>ジャスミンやハイビスカスがブレンドされ、華やかでフルーティーな香りと爽やかな味わいが楽しめる紅茶。</p>
+                <div class="container"></div>
+                <a href="#purchase" class="buttan">購入</a>
+            </div>
+        </li>
+
+        <li class="4">
+            <div class="img"><img src="picture/ゴールデンサンライズ.jpg" alt=""></div>
+            <div class="text">
+                <h1>ゴールデンサンライズ</h1>
+                <p> マンゴーとパッションフルーツの風味が広がり、明るい朝の太陽のようなエネルギーを与えてくれる紅茶。</p>
+                <div class="container"></div>
+                <a href="#purchase" class="buttan">購入</a>
+            </div>
+        </li>
+
+        <li class="5">
+            <div class="img"><img src="picture/ワイルドフォレスト.jpg" alt=""></div>
+            <div class="text">
+                <h1>ワイルドフォレスト</h1>
+                <p>ブルーベリーやイチゴ、ブラックベリーなどの森の実をイメージしたフルーティーで自然な香りと味わいが特徴の紅茶。</p>
+                <div class="container"></div>
+                <a href="#purchase" class="buttan">購入</a>
+            </div>
+        </li>
+
+        <li class="6">
+            <div class="img"><img src="picture/シルクエンシャント.jpg" alt=""></div>
+            <div class="text">
+                <h1>シルクエンシャント</h1>
+                <p>バラやラベンダーの花びらが華やかなアクセントを加え、なめらかで繊細な口当たりの紅茶。</p>
+                <div class="container"></div>
+                <a href="#purchase" class="buttan">購入</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+
+<!-- 購入 -->
+ <div id="purchase">
+    <div class="inner">
+        <div class="left"><h1 class="template">PURCHASE</h1></div>
+        <div class="right">
+            <table>
+                <tr>
+                    <th>商品名</th>
+                    <th>数量</th>
+                    <th>小計</th>
+                </tr>
+
+                <tr class="item">
+                    <td class="product-name">エメラルドモーニング（100g）<br>
+                    ¥<span class="price">800</span>
+                （税込）</td>
+                    <td><input class="quantity" type="number" date="800"></td>
+                    <td class="subtotal"></td>
+                </tr>
+
+                <tr class="item">
+                    <td class="product-name">ミスティックムーンライト（100g）<br>
+                    ¥<span class="price">800</span>
+                （税込）</td>
+                    <td><input class="quantity" type="number" date="800"></td>
+                    <td class="subtotal"></td>
+                </tr>
+
+                <tr class="item">
+                    <td class="product-name">グリーンヴィーナス（100g）<br>
+                    ¥<span class="price">800</span>
+                （税込）</td>
+                    <td><input class="quantity" type="number" date="800"></td>
+                    <td class="subtotal"></td>
+                </tr>
+
+                <tr class="item">
+                    <td class="product-name">ゴールデンサンライズ（100g）<br>
+                    ¥<span class="price">800</span>
+                （税込）</td>
+                    <td><input class="quantity" type="number" date="800"></td>
+                    <td class="subtotal"></td>
+                </tr>
+
+                <tr class="item">
+                    <td class="product-name">ワイルドフォレスト（100g）<br>
+                    ¥<span class="price">800</span>
+                （税込）</td>
+                    <td><input class="quantity" type="number" date="800"></td>
+                    <td class="subtotal"></td>
+                </tr>
+
+                <tr class="item">
+                    <td class="product-name">シルクエンシャント（100g）<br>
+                    ¥<span class="price">800</span>
+                （税込）</td>
+                    <td><input class="quantity" type="number" date="800"></td>
+                    <td class="subtotal"></td>
+                </tr>
+
+                <tr class="item">
+                    <td class="product-name">セット（100g）<br>
+                    ¥<span class="price">800</span>
+                （税込）</td>
+                    <td><input class="quantity" type="number" date="800"></td>
+                    <td class="subtotal"></td>
+                </tr>
+            </table>
+            <div class="total_corner">
+                <span class="text">合計</span>
+                <span class="total"></span>
+            </div>
+            <a href="#" class="buttan">購入</a>
+        </div>
+
+
+    </div>
+
+ </div>
+
+<!-- レビュー -->
+<div id="review">
+    <h1 class="template">REVIEW</h1>
+    
+    <ul>
+        <li>山田太郎 (35歳)<br>
+            コーヒー派の私でも、この紅茶セットの味わいに驚きました。特にミスティックムーンライトのラベンダーとバニラの組み合わせは、心地よいリラックス効果があり、日々のストレスから解放されます。
+        </li>
+        <li>
+            鈴木花子 (40歳)<br>
+            普段はコーヒーばかり飲んでいましたが、友人から勧められてこのセットを試してみたところ、グリーンヴィーナスのフルーティーな香りに魅了されました。これからは紅茶も楽しむことにします！
+        </li>
+        <li>
+            田中健太 (28歳)<br>ゴールデンサンライズは、朝の活力を与えてくれる爽やかな味わいで、コーヒーとは一味違ったエネルギーを感じます。これからは朝のルーティンに取り入れていこうと思います！
+        </li>
+        <li>
+            佐藤美咲 (45歳)<br>ワイルドフォレストのフルーティーな香りと自然な味わいは、まさに森の中を歩いているような気分にさせてくれます。これまでのハーブティーとは違う新たな体験でした。
+        </li>
+        <li>
+            小林健一 (32歳)<br>シルクエンシャントは、バラやラベンダーの花びらの華やかなアクセントが、心を穏やかにしてくれます。紅茶のイメージを覆す、穏やかなひとときを提供してくれました。
+        </li>
+    </ul>
+</div>
+
+
+</body>

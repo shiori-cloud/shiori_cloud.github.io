@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960.1" height="2479.022" viewBox="0 0 960.1 2479.022">
+  <defs>
+    <clipPath id="clip-path">
+      <rect y="-263" width="960.1" height="2479.022" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="product_background_right" transform="translate(0 263)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="グループ_3" data-name="グループ 3" transform="translate(-834.582 -3587.829)">
+      <path id="wave-haikei_1_" data-name="wave-haikei (1)" d="M1435.556,1938.42l-99.021-64.614c-99.266-64.614-297.307-193.842-363.4-323.07-65.85-129.228.492-258.456-4.914-387.684-5.16-129.228-82.312-258.456-201.727-387.684C646.832,646.14,484.664,516.912,461.322,387.684S553.463,129.228,611.2,64.614L668.946,0h874.722V2002.114Z" transform="translate(376.332 3801.738)" fill="rgba(243,236,229,0.8)"/>
+      <path id="パス_7" data-name="パス 7" d="M1046.968,3801.738s415.7-465.645,868.768-477.69,0,477.69,0,477.69Z" transform="translate(-0.418 1)" fill="rgba(243,236,229,0.8)"/>
+    </g>
+  </g>
+</svg>

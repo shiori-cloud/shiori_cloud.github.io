@@ -1,0 +1,316 @@
+@charset "UTF-8";
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: none;
+font-style: normal;
+text-align: left;
+zoom: 1;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+table {
+border-collapse: collapse;
+font-family: inherit;
+}
+h1,h2,h3,h4,h5 {
+font-size: 100%;
+font-weight: normal;
+line-height: 1;
+}
+input,textarea,select {
+font-family: inherit;
+font-size: 16px;
+}
+input[type="button"],input[type="text"],input[type="submit"] {
+-webkit-appearance: none;
+border-radius: 0;
+}
+textarea {
+resize: none;
+-webkit-appearance: none;
+border-radius: 0;
+}
+th,td {
+border-collapse: collapse;
+}
+table th,table td {
+white-space: nowrap;
+}
+ul,ol {
+list-style-type: none;
+}
+img {
+vertical-align: text-bottom;
+vertical-align: -webkit-baseline-middle;
+max-width: 100%;
+height: auto;
+width /***/:auto;
+}
+
+/*ヘッダー====================================================*/
+header{
+	width:91.94444444%;
+	margin:30px auto 0 auto;
+	height:auto;
+	display:flex;
+
+}
+
+header .logo{
+	background:url(images/icon_logo.png) no-repeat left center;
+	background-size:28.2px;
+	font-size:28.2px;
+	padding-left:31px;
+	color:#fff;
+	line-height:28.2px;
+	font-weight:bold;
+}
+
+header .logo span{
+	font-size:16.02px;
+}
+
+
+header .menu{
+	margin-left:auto;
+	height:13px;
+	background:url("images/btn_trigger.png") no-repeat left center;
+	background-size:13px;
+	padding-left:15px;
+	font-size:10px;
+	color:#fff;
+	vertical-align: middle;
+	margin-top:7.6px;
+
+}
+
+
+/*メインイメージ====================================================*/
+#mainimage{
+	width:100%;
+	height:464px;
+	position:absolute;
+	top:0;
+	z-index:-1;
+}
+
+#mainimage .image{
+	width:76.38888889%;
+	height:387px;
+	position:absolute;
+	z-index:1;
+}
+
+#mainimage img{
+	object-fit:cover;
+	height:100%;
+}
+
+#mainimage .background{
+	width:54.16666666666667%;
+	height:100%;
+	background-color:#222222;
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:-1;
+}
+
+#mainimage .text{
+	color:#fff;
+	z-index:2;
+	position:absolute;
+	top:33.62068966%;
+	right:11.80555555555556%;
+	
+}
+
+
+#mainimage .text h1{
+	font:900 4.5rem Montserrat;
+}
+
+#mainimage .text p{
+	font:20px Noto Sans JP Bold;
+	letter-spacing:5;
+}
+
+/* フォーム----------------------------------------- */
+#form{
+    margin:521px auto 120px auto;
+    max-width:700px;
+}
+
+#form p.text{
+    font:16px/1.5 Noto Sans JP;
+    letter-spacing:4;
+    margin-bottom:52px;
+}
+
+#form .item{
+    font:16px Noto Sans JP Bold;
+    letter-spacing:4;
+}
+
+#form input{
+    margin:10px 0 42px 0;
+}
+
+#form input[type="radio"]{
+    font-family:YuGothic;
+}
+
+#form label{
+	margin-right:50px;
+}
+
+
+#form input[type="text"]{
+    width: 700px;
+    height: 41px;
+}
+
+#form input[type="texterea"]{
+    width: 700px;
+    height: 212px;
+}
+
+#form .absolutely{
+    background-color:black;
+    font:12px Noto Sans JP Bold;
+    color:#fff;
+    letter-spacing:4;
+    width: 24px;
+    height: 16px;
+    margin-left:25px;
+}
+
+#form .policy h1{
+    font:900 16px Montserrat;
+    letter-spacing:4;
+}
+
+#form .policy p{
+    width: 680px;
+    height: 242px;
+    overflow:auto;
+    border:1px solid #333;
+    padding:10px;
+}
+
+#form .agree{
+    margin:42px auto 0 auto;
+    text-align:center;
+}
+
+#form .submit{
+    background-color:#222;
+    color:#fff;
+    width: 160px;
+    height: 36px;
+    text-align:center;
+    line-height:36px;
+    margin:0 auto;
+}
+
+
+/*フッター====================================================*/
+#footer{
+	background-color:#707070;
+	width:100%;
+	height:50px;
+}
+
+#footer p{
+	font:10px Montserrat Medium;
+	letter-spacing:15;
+	color:#fff;
+	text-align:center;
+	line-height:50px;
+}
+
+/* メディアクエリ----------------------------- */
+@media screen and (max-width:768px){
+	header.logo{
+		font-size:20.61px;
+		background-size:20.61px;
+		line-height:20.61px;
+	}
+
+	#mainimage{
+		height:615px;
+	}
+
+	#mainimage img{
+		height:529px;
+	}
+
+	#mainimage .text h1{
+		font-size:4rem;
+	}
+
+	#form{
+		margin-top:750px;
+		width: 86.9792%;
+
+	}
+
+	#form input[type="text"]{
+		width:100%;
+	}
+
+	#form input[type="texterea"]{
+		width: 100%;
+	}
+
+	#form .policy p{
+		width: 100%;
+	}
+
+	
+}
+
+@media screen and (max-width:375px){
+	header.logo{
+		font-size:18.13px;
+		background-size:18.13px;
+		line-height:18.13px;
+	}
+
+	#mainimage{
+		height:449Px;
+	}
+
+	#mainimage img{
+		height:387px;
+	}
+
+	#form{
+		margin-top:445px;
+		width: 92%;
+	}
+
+	#form label{
+		display:block;
+	}
+
+
+}

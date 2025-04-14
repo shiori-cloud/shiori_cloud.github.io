@@ -1,0 +1,983 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: none;
+font-style: normal;
+text-align: left;
+zoom: 1;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+table {
+border-collapse: collapse;
+font-family: inherit;
+}
+h1,h2,h3,h4,h5 {
+font-size: 100%;
+font-weight: normal;
+line-height: 1;
+}
+input,textarea,select {
+font-family: inherit;
+font-size: 16px;
+}
+input[type="button"],input[type="text"],input[type="submit"] {
+-webkit-appearance: none;
+border-radius: 0;
+}
+textarea {
+resize: none;
+-webkit-appearance: none;
+border-radius: 0;
+}
+th,td {
+border-collapse: collapse;
+}
+table th,table td {
+white-space: nowrap;
+}
+ul,ol {
+list-style-type: none;
+}
+img {
+vertical-align: text-bottom;
+vertical-align: -webkit-baseline-middle;
+max-width: 100%;
+height: auto;
+width /***/:auto;
+}
+
+/*全体----------------------------------------------------*/
+*{
+	box-sizing:border-box;
+}
+
+html{
+	font-size:16px;
+	box-sizing:border-box;
+    scroll-behavior: smooth;
+}
+
+
+.buttan{
+	font:bold 0.8rem Montserrat;
+	width:160px;
+	height:36px;
+	background-color:#000;
+	color:#fff;
+	line-height:36px;
+	text-align:center;
+
+}
+
+.buttan:hover{
+	background-color:#707070;
+}
+
+a{
+	text-decoration:none;
+}
+
+/* 共通部分（ヘッダー&フッター）----------------------------------- */
+
+/*ヘッダー====================================================*/
+header{
+	width:91.94444444%;
+	margin:30px auto 0 auto;
+	height:28.2px;
+	display:flex;
+	z-index:11;
+
+}
+
+header .logo{
+	background:url(images/icon_logo.png) no-repeat left center;
+	background-size:28.2px;
+	font-size:28.2px;
+	padding-left:31px;
+	color:#fff;
+	line-height:28.2px;
+	font-weight:bold;
+}
+
+header .logo span{
+	font-size:16.02px;
+}
+
+
+
+
+header .menu{
+	margin-left:auto;
+	height:13px;
+	background:url("images/btn_hambergermenu.png") no-repeat left center;
+	background-size:13px;
+	padding-left:15px;
+	font-size:10px;
+	color:#fff;
+	vertical-align: middle;
+	margin-top:7.6px;
+
+}
+
+header .menu:hover{
+	cursor:pointer;
+}
+
+
+/* ハンバーガーメニュー------------------------- */
+
+.humbergermenu{
+	display:none;
+	position:fixed;
+	width:36.11111111%;
+	background-color:rgba(0,0,0,0.8);
+	z-index:10;
+	color:#fff;
+	height:100%;
+	right:0;
+	top:0;
+
+}
+
+.overlay{
+	width: 100vw;
+	height: 100vh;
+	background-color:rgba(0,0,0,0.5);
+	top:0;
+	left:0;
+	display:none;
+	position:fixed;
+	z-index:3;
+}
+
+.humbergermenu .close{
+	position:absolute;
+	top:36px;
+	right:4.027777777777778vw;
+	color:#fff;
+	background:url(images/btn_trigger.png) no-repeat center left;
+	background-size:1.322916666666667vw;
+	padding-left:2vw;
+}
+
+.humbergermenu .close:hover{
+	cursor:pointer;
+}
+
+.humbergermenu .close img{
+	width:1.322916666666667vw;
+}
+
+.humbergermenu p{
+	margin:180px auto 0 auto;
+	width:3.125vw;
+}
+
+.humbergermenu ul{
+	margin-top:40px;
+	font:900 20px Montserrat;
+	letter-spacing:68;
+}
+
+.humbergermenu ul li{
+	margin:0 auto 30px auto;
+	width:fit-content;
+}
+
+.humbergermenu ul li:hover{
+	background-color:#707070;
+}
+
+
+.humbergermenu ul li a{
+	color:#fff;
+}
+
+
+/*フッター====================================================*/
+#footer{
+	background-color:#707070;
+	width:100%;
+	height:50px;
+}
+
+#footer p{
+	font:10px Montserrat Medium;
+	letter-spacing:15;
+	color:#fff;
+	text-align:center;
+	line-height:50px;
+}
+
+/* メインイメージのjQuery */
+#mainimage .background{
+	opacity:0;
+	width: 0;
+	z-index:-1;
+	background-color: aqua;
+}
+
+#mainimage .image{
+	overflow:hidden;
+	display:none;
+}
+
+#mainimage .text{
+	display:none;
+}
+
+
+/* メインページ------------------------------------------------------------------ */
+
+
+/*メインイメージ====================================================*/
+
+#mainpage #mainimage{
+	width:100%;
+	height:740px;
+	position:absolute;
+	top:0;
+	z-index:-1;
+}
+
+#mainpage #mainimage p.image{
+	width:76.38888889%;
+	height:640px;
+	z-index:1;
+}
+
+#mainpage #mainimage p img{
+	width: 100%;
+	height:100%;
+	object-fit:cover;
+}
+
+#mainpage #mainimage .background{
+	height:740px;
+	background-color:#222222;
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+#mainpage #mainimage .text{
+	color:#fff;
+	z-index:2;
+	position:absolute;
+	top:21.2621622%;
+	right:13.47222222%;
+}
+
+#mainpage #mainimage .text p{
+	font:bold 1.5rem YuGothic;
+	height:auto;
+}
+
+#mainpage #mainimage .text h1{
+	font:900 4.5rem Montserrat;
+	padding-top:10px;
+	margin:0;
+}
+
+/*アバウト====================================================*/
+#mainpage #aboutus{
+	width:76.38888889%;
+	margin:0 auto;
+	height:auto;
+	margin-top:801.8px;
+	background:url(images/about-img.jpg) no-repeat center center;
+	background-size:cover;
+	padding:110px 0 110px 8.47457627%;
+}
+
+#mainpage #aboutus .inner{
+	background-color:rgba(255,255,255,0.95);
+	width:53.63636364%;
+	height:auto;
+	padding:50px 30px;
+	
+}
+
+#mainpage #aboutus .inner h1{
+	font:900 2rem Montserrat;
+	letter-spacing:68;
+
+}
+
+#mainpage #aboutus .inner p.text{
+	font:1rem Noto Sans JP;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+
+/*ワークス====================================================*/
+
+#mainpage #contents_inner{
+	background-color:#F2F2F2;
+	z-index:-1;
+	width:100%;
+	height:771px;
+	display:flex;
+	gap:4.16666667%;
+	padding:180px 0 60px 0;
+	text-align: center;
+	position:relative;
+	top:-100px;
+}
+
+#mainpage #contents_inner h1{
+	font: bold 32px Montserrat;
+	letter-spacing:68;
+}
+
+#mainpage #contents_inner .text{
+	font-size:16px;
+	margin:27px 0 28px 0;
+	
+}
+
+#mainpage #works{
+	width:36.11111111%;
+	height:531px;
+	margin-left:11.80555556%;
+
+}
+
+#mainpage #works img{
+	width:100%;
+}
+
+
+/*カルチャー====================================================*/
+#mainpage #culture{
+	width:36.11111111%;
+	height:531px;
+}
+
+#mainpage #culture img{
+	width:100%;
+}
+
+
+/*トピックス====================================================*/
+#mainpage #latest_topics{
+	width:100%;
+	height:auto;
+	margin-bottom:100px;
+}
+
+
+#mainpage #latest_topics .inner{
+	margin:0 11.80555556%;
+	padding-top:60px;
+
+}
+
+#mainpage #latest_topics h1{
+	font:900 2rem Montserrat;
+}
+
+#mainpage #latest_topics dl{
+	margin:29px 0 0 31.49606299%;
+	width:auto;
+}
+
+#mainpage #latest_topics dl div{
+	height:81px;
+	border-bottom:1px solid #ddd;
+	padding:29px 0 10px 0;
+}
+
+#mainpage #latest_topics dl dt{
+	font:bold 10px Montserrat Medium;
+	margin-bottom:9px;
+}
+
+#mainpage #latest_topics dl dd{
+	font:bold 14px YuGothic;
+}
+
+#mainpage #latest_topics .buttan{
+	margin:30px 0 0 auto;
+}
+
+/*コンタクト====================================================*/
+#mainpage #contact{
+	width:100%;
+	height:570px;
+	display:flex;
+	background-color:#F2F2F2;
+}
+
+#mainpage #contact .left{
+	margin:132px 0 0 11.80555556%;
+	width:30.55555556%;
+}
+
+#mainpage #contact .left h1{
+	font:900 32px Montserrat;
+	letter-spacing:68;
+}
+
+#mainpage #contact .left p{
+	font:16px YuGothic;
+	margin:30px 0;
+}
+
+#mainpage #contact .right{
+	width:40.277777778%;
+	height:390px;
+	margin:60px 11.80555556% 0 0;
+}
+
+#mainpage #contact .right img{
+	height:100%;
+	object-fit:cover;
+}
+
+
+
+/*下層ページ　共通部分（メインイメージ）====================================================*/
+.underpage #mainimage{
+	width:100%;
+	height:464px;
+	position:absolute;
+	top:0;
+	z-index:-1;
+}
+
+.underpage #mainimage .image{
+	width:76.38888889%;
+	height:387px;
+	position:absolute;
+	z-index:1;
+}
+
+.underpage #mainimage img{
+	object-fit:cover;
+	height:100%;
+}
+
+.underpage #mainimage .background{
+	width:54.16666666666667%;
+	height:100%;
+	background-color:#222222;
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+.underpage #mainimage .text{
+	color:#fff;
+	z-index:2;
+	position:absolute;
+	top:33.62068966%;
+	right:11.80555555555556%;
+	
+}
+
+
+.underpage #mainimage .text h1{
+	font:900 4.5rem Montserrat;
+}
+
+.underpage #mainimage .text p{
+	font:20px Noto Sans JP Bold;
+	letter-spacing:5;
+}
+
+/* aboutusページ----------------------------------- */
+
+
+/*vision------------------------------------------*/
+#aboutuspage #vision{
+	margin:584px 0 120px 27.5%;
+	width:auto;
+	height:auto;
+}
+
+#aboutuspage #vision h1{
+	font:900 2rem Montserrat;
+	letter-spacing:68;
+}
+
+#aboutuspage #vision h2{
+	font:bold 1.5rem YuGothic;
+	letter-spacing:5;
+	margin:25px 0 27px 0;
+}
+
+#aboutuspage #vision p{
+	font:1rem/2 Noto Sans JP Bold;
+}
+
+
+/* CEO MESSAGE------------------------------------ */
+
+#aboutuspage #ceo_message{
+	margin:120px 11.80555556% 170px 11.80555556%;
+	height:900px;
+	position:relative;
+	width:76.38888889%;
+}
+
+#aboutuspage #ceo_message .left{
+	width:29.16666666666667vw;
+	z-index:1;
+}
+
+#aboutuspage #ceo_message .left{
+	height:100%;
+	object-fit:cover;
+}
+
+#aboutuspage #ceo_message .right{
+	width:53.47222222222222vw;
+	background-color:#F0F0F0;
+	position:absolute;
+	top:144px;
+	right:0;
+	padding:10% 10%;
+	box-sizing:border-box;
+	 z-index:-1;
+}
+
+#aboutuspage #ceo_message .right .text{
+	margin:0 auto;
+	max-width:400px;
+}
+
+#aboutuspage #ceo_message .right h1{
+	font:900 32px Montserrat;
+	letter-spacing:68;
+	margin-bottom:30px;
+}
+
+#aboutuspage #ceo_message .right p{
+	font:16px/2 Noto Sans JP Bold;
+}
+
+/* COMPANY----------------------------------------- */
+#aboutuspage #company{
+	margin:0 11.8055555556%;
+	padding-top:120px;
+}
+
+#aboutuspage #company h1{
+	font:900 2rem Montserrat;
+	letter-spacing:68;
+	border-bottom:1px solid #ddd;
+	padding-bottom:30px;
+}
+
+#aboutuspage #company table{
+	margin-left:27.27272727%;
+	width:72.72727273%;
+}
+
+#aboutuspage #company table tr{
+	border-bottom:1px solid #ddd;
+	height:56px;
+}
+
+#aboutuspage #company table th{
+	width:144px;
+}
+
+#aboutuspage #company .map{
+	width:100%;
+	height: 360px;
+	margin:40px 0 130px 0;
+}
+
+#aboutuspage #company .map iframe{
+	width:100%;
+}
+
+
+/* contactページ------------------------------- */
+
+
+/* フォーム----------------------------------------- */
+#contactpage #form{
+    margin:521px auto 120px auto;
+    max-width:700px;
+}
+
+#contactpage #form p.text{
+    font:16px/1.5 Noto Sans JP;
+    letter-spacing:4;
+    margin-bottom:52px;
+}
+
+#contactpage #form .item{
+    font:16px Noto Sans JP Bold;
+    letter-spacing:4;
+}
+
+#contactpage #form input{
+    margin:10px 0 42px 0;
+}
+
+#contactpage #form input[type="radio"]{
+    font-family:YuGothic;
+}
+
+#contactpage #form label{
+	margin-right:50px;
+}
+
+
+#contactpage #form input[type="text"]{
+    width: 700px;
+    height: 41px;
+}
+
+#contactpage #form input[type="texterea"]{
+    width: 700px;
+    height: 212px;
+}
+
+#contactpage #form .absolutely{
+    background-color:black;
+    font:12px Noto Sans JP Bold;
+    color:#fff;
+    letter-spacing:4;
+    width: 24px;
+    height: 16px;
+    margin-left:25px;
+}
+
+#contactpage #form .policy h1{
+    font:900 16px Montserrat;
+    letter-spacing:4;
+}
+
+#contactpage #form .policy p{
+    width: 680px;
+    height: 242px;
+    overflow:auto;
+    border:1px solid #333;
+    padding:10px;
+}
+
+#contactpage #form .agree{
+    margin:42px auto 0 auto;
+    text-align:center;
+}
+
+#contactpage #form .submit{
+    background-color:#222;
+    color:#fff;
+    width: 160px;
+    height: 36px;
+    text-align:center;
+    line-height:36px;
+    margin:0 auto;
+}
+
+
+
+/* メディアクエリ----------------------------- */
+@media screen and (max-width:768px){
+	/* 共通部分----------------------- */
+	header .logo{
+		background-size:20.61px;
+		font-size:20.61px;
+	}
+
+	/* メインページ----------------- */
+
+	#mainpege #mainimage p.image{
+		height:890px;
+	}
+
+	#mainpege #mainimage .background,#mainpege #mainimage{
+		height: 1024px;
+	}
+
+	#mainpege #mainimage .text{
+		right:6.66666667%;
+	}
+
+	#mainpege #mainimage .text h1{
+		font-size:3.5rem;
+	}
+
+	#mainpege #aboutus{
+		margin-top:1104px;
+		width:100%;
+		height: auto;
+		background-size:cover;
+		padding:50px 0;
+	}
+
+	#mainpege #aboutus .inner{
+		width:76.82291667%;
+		height: auto;
+		margin:0 auto;
+
+	}
+
+	#mainpege #contents_inner{
+		display:flex;
+		flex-direction: column;
+		height:auto;
+		gap:0;
+		padding:160px 0 40px 30px;
+
+	}
+
+	#mainpege #works{
+		width:67.70833333%;
+		margin:0;
+		margin-left:3.90625%;
+		height:auto;
+	}
+
+	#mainpege #culture{
+		width:67.70833333%;
+		margin:80px 0 0 3.90625%;
+		height:auto;
+	}
+
+	#mainpege #latest_topics{
+		height:auto;
+
+	}
+
+	#mainpege #latest_topics .inner{
+		margin:-60px 8%;
+		padding:0;
+	}
+
+	#mainpege #latest_topics dl{
+		margin:0;
+	}
+
+	#mainpege #latest_topics dl div{
+		width:100%;
+	}
+
+	#mainpege #latest_topics .buttan{
+		margin-left:0;
+	}
+
+	#mainpege #contact{
+		height:auto;
+		flex-direction: column;
+		padding:0 0 80px 3.90625%;
+
+	}
+
+	#mainpege #contact .left{
+		margin:0;
+		width:100%;
+		order:2
+	}
+
+	#mainpege #contact .right{
+		width:67.70833333%;
+		order:1;
+		margin:30px 0 30px 0;
+
+	}
+
+	
+	/* 下層ページ------------------------------- */
+	.underpage #mainimage{
+		height:615px;
+	}
+
+	.underpage #mainimage img{
+		height:529px;
+	}
+
+	.underpage #mainimage .text h1{
+		font-size:4rem;
+	}
+
+	/* aboutusページ--------------------------- */
+	#aboutuspage #vision{
+		margin:695px 0 80px 22.12389380530973%;
+	}
+
+	#aboutuspage #ceo_message{
+		margin:80px 3.90625% 82px 3.90625%;
+		width:92.1875%;
+	}
+
+	#aboutuspage #ceo_message .left{
+		width:41.66666666666667vw;
+	}
+
+	#aboutuspage #ceo_message .right{
+		top:131px;
+		padding:11.9047619047619% 8.097165991902834%;
+		width:64.32291666666667vw;
+	}
+
+	#aboutuspage #company{
+		margin:0 7.8125%;
+		padding-top:120px;
+	}
+
+	#aboutuspage #company table{
+		margin-left:0;
+		width: 100%;
+	}
+
+	#aboutuspage #company .map{
+		height:230px;
+		margin-bottom:210px;
+	}
+
+	/* コンタクトページ------------- */
+	#contactpage #form{
+		margin-top:750px;
+		width: 86.9792%;
+
+	}
+
+	#contactpage #form input[type="text"]{
+		width:100%;
+	}
+
+	#contactpage #form input[type="texterea"]{
+		width: 100%;
+	}
+
+	#contactpage #form .policy p{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:375px){
+	/* 共通部分------------------ */
+	html{
+		font-size:14px;
+	}
+	/* メインページ--------- */
+	#mainpage #mainimage p{
+		height:580px;
+	}
+
+	#mainpage #mainimage .background,#mainimage{
+		height: 667px;
+	}
+
+	#mainpage #mainimage .text{
+		right:6.66666667%;
+	}
+
+	/* aboutus---------- */
+	#mainpage #aboutus{
+		margin-top:745px;
+		height: 541px;
+		padding:0;
+		
+	}
+
+	#mainpage #aboutus .inner{
+		width: 92%;
+		height: 441px;
+		margin:0 auto;
+
+	}
+
+	#mainpage #contents_inner{
+		height:1000px;
+		gap:0;
+		padding:40px 0 40px 5.33333333%;
+		margin-left:100px;
+	}
+
+	#mainpage #works{
+		width:92%;
+		margin-left:5.33333333%;
+		background-color: aquamarine;
+		height:auto;
+	}
+
+	#mainpage #culture{
+		width:92%;
+		margin:80px 0 0 5.33333333%;
+		background-color: brown;
+		height:auto;
+	}
+
+	#mainpage #contact .right{
+		width:92%;
+	}
+
+
+	/* 下層ページ　共通部分---------------------- */
+	.underpage #mainimage{
+		height:449Px;
+	}
+
+	.underpage #mainimage img{
+		height:387px;
+	}
+
+	.underpage header.logo{
+		font-size:18.13px;
+		background-size:18.13px;
+		line-height:18.13px;
+	}
+
+	.underpage #mainimage{
+		height:449Px;
+	}
+
+	.underpage #mainimage img{
+		height:387px;
+	}
+
+
+	/* コンタクトページ----------------- */
+	#contactpage #form{
+		margin-top:445px;
+		width: 92%;
+	}
+
+	#contactpage #form label{
+		display:block;
+	}
+}
+
+
+/* スクロールフェードイン-------------------- */
+.scroll-fadeIn{
+	opacity:0;
+	visibility:hidden;
+	transform:translateY(3%);
+	transition:opacity 3s,visibility 3s,transform 3s;
+}
+
+.scroll-after{
+	opacity: 1;
+	visibility:visible;
+	transform:translateY(0);
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="portfolio.css" type="text/css">
+    <meta name="robots" content="noindex" />
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script>
+        $(function(){
+            //アコーディオンパネル
+            $(".open li h1").click(function(){
+
+                var content=$(this).next("p")
+            
+                if(content.is(":visible")){
+                    content.slideUp();
+                }else{
+                    $(".open p").slideUp();
+                    content.slideDown();
+                };                
+            });
+
+            //スクロール
+            $(window).scroll(function(){
+  $(".scroll:not(.expanded)").each(function(){
+    const $this = $(this); // `this` を変数に保存
+    const targetPosition = $this.offset().top;
+    const scrollAmount = $(window).scrollTop();
+    const wHeight = $(window).height();
+
+    if(scrollAmount > targetPosition - wHeight + 100) {
+      // 拡大する処理
+      $this.css("transform", "scale(1.5)");
+      $this.addClass("expanded");
+
+     
+      setTimeout(function(){
+        $this.css("transform", "scale(1)"); 
+       
+      }, 2000); 
+    }
+  });
+});
+        });
+    </script>
+
+</head>
+
+<body>
+<header>
+    <div class="logo"><a href="#">Portfolio</a></div>
+    <div class="nav">
+        <ul>
+            <li><a href="#profile">PROFILE</a></li>
+            <li><a href="#skill">SKILL</a></li>
+            <li><a href="#product">PRODUCT</a></li>
+        </ul>
+
+    </div>
+</header>
+
+
+<div class="mainimage">
+    <div class="mainimage_background scroll"></div>
+    <h1>SHIORI HARADA</h1>
+</div>
+
+<div class="inner">
+    
+    <div class="profile" id="profile">
+         <div class="picture"><img src="profile.jpeg" alt=""></div>
+        <div class="text">
+            <h1 class="all_title">プロフィール</h1>
+            昔から創意工夫をして成果物を出すものづくりが好きで、高校時代にパソコンが得意になったことをきっかけに、大学時代から本格的にウェブ制作を学び始めました。<br>
+                    コーディングが特に得意で、デザインを正確に再現しながら、レスポンシブ対応やアニメーションの実装にもこだわっています。<br>
+                    スキルアップし、より表現力のあるサイトを作れるコーダーを目指しています。成果物が完成した時の達成感が何よりのモチベーションであり、学び続ける姿勢を大切にしています。</p>
+        </div>
+
+        <div class="img">
+            
+            <div class="bg_inner">
+                <div class="bg scroll"></div>
+                <div class="letter"><img src="profile_letter.png" alt=""></div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="skill" id="skill">
+        <div class="skill_background scroll"></div>
+        <div class="skill_letter"><img src="skill_letter.svg" alt=""></div>
+        <h1 class="all_title">スキル</h1>
+        <ul>
+            <li>
+                <strong>HTML/CSS</strong>
+                <p>基本的なサイト構築（div、li、form、テーブル）、flexやgridでの柔軟なレイアウト調整、レスポンシブデザインの対応</p>
+            </li>
+            <li>
+                <strong>jQuery</strong>
+                <p>ハンバーガーメニュー、フェードイン/フェードアウト、アコーディオンパネルなどの基本的なアニメーション</p>
+            </li>
+            <li>
+                <strong>デザイン</strong>
+                <p>Adobe XD、Figma、Photoshopを使用したデザイン制作。雰囲気に合うレイアウトや配色</p>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="product" id="product">
+        <div class="product_background_left scroll"></div>
+        <div class="product_background_right scroll"></div>
+        <div class="product_letter"><img src="product_letter.svg" alt=""></div>
+
+        <div class="text">
+            <h1 class="all_title">プロダクト</h1>
+            <ul class="flex">
+                <li>
+                    <img src="product_1.jpg" alt="">
+                    <div class="li_text">
+                        <h1 class="title">ポートフォリオサイト</h1>
+                        <div class="type"><p>Soft</p><p>Artistic</p></div>
+                        <ul class="open">
+                            <li>
+                                <h1>制作</h1>
+                                <p>制作：ライティング、デザイン、コーディング</p>
+                                <p>使用言語：HTML,CSS,jQuery</p>
+                                <p>デザインツール：AdoveXD</p>
+                            </li>
+                            <li>
+                                <h1>説明</h1>
+                                <p>本ウェブサイトを作成しました。白を基調として柔らかな雰囲気を、流体シェイプを用いアーティスティックな雰囲気を出しました。また動きを付けて、流体シェイプがより活きるようにしました。</p>
+                            </li>
+                        
+                            <li>
+                                <h1>参照したサイト</h1>
+                                <p>流体シェイプの際に「Haikei」を用いました</p>
+                            </li>
+                        </ul>
+
+                           <div class="buttan_inner"> 
+                                <div class="buttan"></div>
+                           </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="product_2.jpg" alt="">
+                    <div class="li_text">
+                        <h1 class="title">紅茶特集のサイト</h1>
+                        <div class="type"><p>Elegant</p><p>Calm</p></div>
+                        <ul class="open">
+                            <li>
+                                <h1>制作</h1>
+                                <p>制作：デザイン、コーディング</p>
+                                <p>使用言語：HTML,CSS,jQuery</p>
+                                <p>デザインツール：AdoveXD</p>
+                            </li>
+                            <li>
+                                <h1>説明</h1>
+                                <p>ライティングされているものをデザインから作成しました。メインカラーの紺色でエレガントさを、背景の木目で落ち着いた雰囲気を出しました。</p>
+
+                            <h1>参照したサイト</h1>
+                            <p>「mifu-sensei」の紅茶特集のデザインお題を用いました。<br>(url:https://note.com/mifu_sensei/n/nbe23f60530f9)</p>
+                            </li>
+                        </ul>
+
+                           <div class="buttan_inner"> 
+                                <div class="buttan"><a href="tea_article.html">ウェブサイトに飛ぶ</a></div>
+                           </div>
+                    </div>                  
+                </li>
+                <li>
+                        <img src="product_3.jpg" alt="">
+                        <div class="li_text">
+                            <h1 class="title">デザイン会社のサイト</h1>
+                            <div class="type"><p>Formal</p><p>Stylish</p></div>
+                            <ul class="open">
+                                <li>
+                                    <h1>制作</h1>
+                                    <p>制作：コーディング</p>
+                                    <p>使用言語：HTML,CSS,jQuery</p>
+                                </li>
+                                <li>
+                                    <h1>説明</h1>
+                                    <p>
+                                        デザインカンプを基にデザインカンプに正確にUIも意識しました。「about us」と「contact」の下層ページも作りました。
+                                        </p>
+                                <h1>参照したサイト</h1>
+                                <p>「クリ★スタ」のデザインカンプを用いました。<br>(url:https://crestadesign.org/cording-third/)</p>
+                                </li>
+                            </ul>
+                               <div class="buttan_inner">
+                                    <div class="buttan"><a href="design_company.html">ウェブサイトに飛ぶ</a></div>
+                               </div>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Shiori Harada. All Rights Reserved.</p>
+</footer>
+
+
+</body>

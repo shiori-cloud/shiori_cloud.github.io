@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="425.569" height="324.513" viewBox="0 0 425.569 324.513">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="38" width="425.569" height="324.513" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="profile_letter" transform="translate(-38)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="グループ_6" data-name="グループ 6" transform="translate(-1053.911 -1107.109)">
+      <text id="P" transform="translate(1117.911 1387.454) rotate(-30)" fill="#fff" font-size="103" font-family="SegoePrint, Segoe Print"><tspan x="0" y="0">P</tspan></text>
+      <text id="R" transform="translate(1179.401 1350.721) rotate(-30)" fill="#fff" font-size="103" font-family="SegoePrint, Segoe Print"><tspan x="0" y="0">R</tspan></text>
+      <text id="O" transform="matrix(0.616, -0.788, 0.788, 0.616, 1266.078, 1323.82)" fill="#fff" font-size="103" font-family="SegoePrint, Segoe Print"><tspan x="0" y="0">O</tspan></text>
+      <text id="F" transform="translate(1305.056 1287.397) rotate(-20)" fill="#fff" font-size="103" font-family="SegoePrint, Segoe Print"><tspan x="0" y="0">F</tspan></text>
+      <text id="I" transform="translate(1375.007 1267.766) rotate(-25)" fill="#fff" font-size="103" font-family="SegoePrint, Segoe Print"><tspan x="0" y="0">I</tspan></text>
+      <text id="L" transform="translate(1410.527 1257.15) rotate(-17)" fill="#fff" font-size="103" font-family="SegoePrint, Segoe Print"><tspan x="0" y="0">L</tspan></text>
+      <text id="E" transform="translate(1467.909 1238.649) rotate(-3)" fill="#fff" font-size="103" font-family="SegoePrint, Segoe Print"><tspan x="0" y="0">E</tspan></text>
+    </g>
+  </g>
+</svg>

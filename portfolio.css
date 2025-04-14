@@ -1,0 +1,445 @@
+@chaset "UTF-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: none;
+font-style: normal;
+text-align: left;
+zoom: 1;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+table {
+border-collapse: collapse;
+font-family: inherit;
+}
+h1,h2,h3,h4,h5 {
+font-size: 100%;
+font-weight: normal;
+line-height: 1;
+}
+input,textarea,select {
+font-family: inherit;
+font-size: 16px;
+}
+input[type="button"],input[type="text"],input[type="submit"] {
+-webkit-appearance: none;
+border-radius: 0;
+}
+textarea {
+resize: none;
+-webkit-appearance: none;
+border-radius: 0;
+}
+th,td {
+border-collapse: collapse;
+}
+table th,table td {
+white-space: nowrap;
+}
+ul,ol {
+list-style-type: none;
+}
+img {
+vertical-align: text-bottom;
+vertical-align: -webkit-baseline-middle;
+max-width: 100%;
+height: auto;
+width /***/:auto;
+}
+
+/* 全体 */
+.inner{
+    margin:0 15%;
+}
+
+body{
+    font:1rem 游明朝;
+}
+
+html{
+     scroll-behavior: smooth;
+}
+
+h1.all_title{
+    font:900 2rem ゴシック体;
+    color:#8B5E5E;
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+}
+
+
+/* ヘッダー */
+header{
+    display:flex;
+    position: fixed;
+    padding:30px 5vw;
+    width:90vw;
+    z-index:10;
+    letter-spacing:1.5px;
+
+}
+
+header .logo{
+    width: 100px;
+    height: 70px;
+
+}
+
+header .nav{
+    width: auto;
+    height: 70px;
+    margin-left:auto;
+
+}
+
+header .nav ul{
+    display:flex;
+    gap:10px;
+    margin-left:auto;
+}
+
+
+/* メインイメージ */
+.mainimage{
+    height: auto;
+    position:relative;
+
+}
+
+.mainimage_background{
+    background:url(mainimage_background.png) no-repeat center;
+    height: 800px;
+    width: 61.61458333333333vw;
+    background-size:100% 100%;
+}
+
+.mainimage h1{
+    
+    width: fit-content;
+    position:absolute;
+    top:40%;
+    left:50%;
+    font-size:40px;
+}
+
+/* プロフィール */
+.profile{
+    height: auto;
+    width: 100%;
+    position: relative;
+    padding-top:50px;
+    padding-bottom:63px;
+    margin:100px 0;
+   
+}
+
+.profile .picture{
+    width:25%;
+    height:300px;
+    margin-left:auto;
+}
+
+.profile .picture img{
+    object-fit:cover;
+    width:100%;
+    height:100%;
+    object-position: center top;
+}
+
+.profile .text{
+    width: 55.3125vw;
+    margin:auto 0;
+}
+
+.profile .img{
+    /*width: 60%;*/
+    margin-left:auto;
+}
+
+.profile .img .bg_inner{
+    width: 53.125vw;
+    height:1000px;
+    position:absolute;
+    right:-15vw;
+    top:-400px;
+    z-index:-1;
+}
+
+.profile .img .bg{
+    width:100%;
+    height:100%;
+    background:url(profile_background.png) no-repeat;
+    background-size:100% 100%;
+}
+
+
+.profile .bg_inner .letter{
+    position:absolute;
+    top:15%;
+    right:16.09375vw;
+    width: 22.16510416666667vw;
+    /* background-color: aqua; */
+}
+
+.profile .bg_inner .letter img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* スキル */
+.skill {
+    min-height: 780px;
+    position: relative; 
+}
+
+.skill_background {
+    background:url(skill_background.png);
+    width: 100vw;
+    height:780px;
+    background-size:100% 100%;
+    position: absolute;
+    left: -15vw;
+    top: -173px;
+    z-index: -2;
+}
+
+.skill_letter{
+    position:absolute;
+    top:-50px;
+    right:90px;
+    width: 19.43333333333333vw;
+}
+
+.skill ul {
+    display: flex;
+    gap: 50px;
+    margin-top:100px;
+}
+
+.skill ul li {
+    height: 200px;
+    width: auto;
+    flex:1;
+}
+
+
+/* プロダクト */
+.product{
+    position:relative;
+    width: 100%;    
+    margin:100px 0;
+    height:2500px;
+    /*background-color:rgba(204,204,204,0.2);*/
+}
+
+.product::after{
+    content:"";
+    position:absolute;
+    top:-440px;
+    left:-15vw;
+    background-color:rgba(203,204,204,0.2);
+    width:100vw;
+    height:3000px;
+    z-index: -1;
+}
+
+.product_background_left{
+    background:url(product_background_left.png);
+    position:absolute;
+    top:800px;
+    left:-15vw;
+    width: 100vw;
+     background-size:100% 100%;
+     height:1800px;
+
+}
+
+.product_background_right{
+    background:url(product_background_right.png);
+    position:absolute;
+    top:-436px;
+    right:-15vw;
+    width: 50vw;
+    background-size:100% 100%;
+    height:2000px;
+}
+
+.product_letter{
+    position:absolute;
+    top:146px;
+    right:10vw;
+    width: 22.44791666666667vw;
+}
+
+
+.product h1.all_title{
+    padding-top:500px;
+}
+
+.product .text ul.flex{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+.product .text ul.flex>li{
+    /* border:1px solid #000; */
+    width: 400px;
+    height: auto;
+    padding-bottom:70px;
+    position: relative;
+    border-radius: 150px;/*
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);*/
+}
+
+.product .text ul.flex img{
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+}
+
+.product .text ul.flex>li .type{
+    position:absolute;
+    top:60px;
+    right:-6vw;
+}
+
+.product .text ul.flex>li .type p{
+    font:bold 1rem 游明朝;
+    letter-spacing: 0.3rem;
+    background-color:rgba(225,225,225,0.5);
+    border-radius:50%;
+    padding:20px;
+    text-align:center;
+}
+
+.product .text ul.flex>li .type p:last-child{
+    margin-left:35px;
+    margin-top:-20px;
+}
+
+
+.product .text ul.flex>li:nth-child(1){
+    margin:0 auto 0 0;
+}
+
+.product .text ul.flex>li:nth-child(2){
+    margin:0 auto 0 auto;
+}
+
+.product .text ul.flex>li:nth-child(3){
+    margin:0 0 0 auto;
+}
+
+.product .li_text{
+    padding:10px 0;
+    background-color:#fff;
+}
+
+.product li .title{
+    font:bold 1.2rem 游明朝;
+    text-align: center;
+}
+
+.product .text .open h1{
+    
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+    line-height:40px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0 10%;
+}
+
+.product .text .open h1:hover{
+    cursor: pointer;
+}
+
+.product .text .open h1::after{
+    content:"";
+    width: 10px;
+    height: 10px;
+    border-top:1px solid #000;
+    border-right:1px solid #000;
+    transform:rotate(135deg);
+}
+
+
+.product .text .open p{
+    display:none;
+    padding:0 10%;
+    border-bottom:1px solid #ccc;
+}
+
+.product .buttan_inner{
+    position:absolute;
+    bottom:0;
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    height:80px;
+    line-height: 80px;
+    
+}
+
+.product .buttan{
+    width: 100%;
+    text-align: center;
+    background-color:#fff;
+}
+
+
+.product .buttan:hover{
+    cursor: pointer;
+    background-color:#ccc;
+}
+
+.product .buttan:first-child{
+    border-bottom-left-radius: 150px;
+    border-right:1px solid #ccc;
+}
+
+.product .buttan:last-child{
+    border-bottom-right-radius: 150px;
+}
+
+
+/*footer*/
+footer{
+    background-color:#EAD4D1;
+    width:100vw;
+    padding:30px 0;
+    display:flex;
+    justify-content: center;
+}
+
+footer p{
+   
+}
+
+/*jquery*/
+.scroll{
+    transition: transform 1s ease-in-out;
+}

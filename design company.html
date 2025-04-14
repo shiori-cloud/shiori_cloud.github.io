@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, user-scalable=no">
+            <link rel="stylesheet" href="disign_company.css" type="text/css">
+            <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+            <script>
+            
+            $(function(){
+                  // ハンバーガーメニュー
+                  $(".menu").click(function(){
+                        $(".humbergermenu,.overlay").fadeIn();
+                        $(".menu").fadeOut();
+                  });
+            
+                  $(".close").click(function(){
+                        $(".humbergermenu, .overlay").fadeOut();
+                        $(".menu").fadeIn();
+                  });
+
+                  // メイン画像
+                  $("#mainimage .image").fadeIn(1000,function(){
+                        $("#mainimage .background").animate({
+                              opacity:1,
+                              width:"54.16666667%"
+                        },500,function(){
+                              $("#mainimage .text").fadeIn(1000);
+                        });
+                  });
+
+                  // ABOUTUS
+                  $(window).scroll(function(){
+                        $(".scroll-fadeIn").each(function(){
+                              var targetPosition=$(this).offset().top;
+                              var scrollAmount=$(window).scrollTop();
+                              var wHeight=$(window).height();
+
+                              if(scrollAmount > targetPosition - wHeight + 100){
+                                    $(this).addClass("scroll-after");
+                              }
+                        });
+                  });
+            });
+
+
+           
+
+
+            </script>
+      </head>
+
+      <body id="mainpage">
+            <!--ヘッダー--------------------------------------------------------->
+            <header>
+                  <a href="#">
+                        <div class="logo">
+                              <p>DIGSMILE
+                                    <span>INC.</span>
+                              </p>
+                        </div>
+                  </a>
+
+                  <div class="menu">
+                        <p>MENU</p>
+                  </div>
+            </header>
+
+            <!-- ハンバーガーメニュー--------------->
+            <div class="humbergermenu">
+                  <div class="close">MENU</div>
+                  
+                  <p><img src="images/icon_logo.png" ></p>
+                  <ul>
+                        <li><a href="aboutus.html">ABOUT US</a></li>
+                        <li><a href="#">WORKS</a></li>
+                        <li><a href="#">CULTURE</a></li>
+                        <li><a href="#">TOPICS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                  </ul>
+                 
+            </div>
+            <div class="overlay"></div>
+
+            <!--メインイメージ--------------------------------------------------------->
+            <div id="mainimage">
+                  <p class="image"><img src="images/kv-img.png"></p>
+                  <div class="background"></div>
+
+                  <div class="text">
+                        <p>デザインで人を笑顔にする会社<br>DIGSMILE INC.</p>
+                        <h1>DESIGN <br> FOR <br> SMILE</h1>
+                  </div>
+            </div>
+
+            <!--アバウト--------------------------------------------------------->
+            <div id="aboutus" class="scroll-fadeIn">                   
+                  <div class="inner">
+                        <h1>ABOUT US</h1>
+                        <p class="text">DIGSMILEは、デザインで人を笑顔にする会社。<br>なんでもない日常に少しのワクワクと遊び心を提供します。笑顔には世界を変える力がある、デザインには人を幸せにする力がある。毎日に幸せを感じて生きていきたい。DIGSMILEの社名にはそんな想いが込められています。</p>
+                        <a href="aboutus.html">
+                              <p class="buttan"><span>READ MORE</span></p>
+                        </a>
+                  </div>
+            </div>
+
+
+            
+
+            <!--ワークス--------------------------------------------------------->
+            <div id="contents_inner" class="scroll-fadeIn">
+                  <div id="works">
+                        <h1>WORKS</h1>
+                        <p><img src="images/works-img.png"></p>
+                        <p class="text">DIGSMILEの制作実績を紹介します。</p>
+                        <a href="#">
+                              <div class="buttan">READ MORE</div>
+                        </a>
+
+                  </div>
+
+            <!--カルチャー--------------------------------------------------------->
+
+                   <div id="culture">
+                        <h1>CULTURE</h1>
+                        <p><img src="images/culture-img.png"></p>
+                        <p class="text">DIGSMILEの社内文化について紹介します。</p>
+                        <a href="#">
+                              <div class="buttan">READ MORE</div>
+                        </a>
+                   </div>
+
+            </div>
+
+            <!--トピックス--------------------------------------------------------->
+            <div id="latest_topics" class="scroll-fadeIn">
+                  <div class="inner">
+                         <h1>LATEAT TOPICS</h1>
+                        <dl>
+                              <div>
+                                    <dt>2020.02.01</dt>
+                                    <dd>イベントレポート「VRクリエイター座談会 ～５Gの次に来るもの～」</dd>
+                              </div>
+
+                              <div>
+                                    <dt>2020.01.18</dt>
+                                    <dd>プレスリリースのお知らせ DIGGIN’ RECORDS</dd>
+                              </div>
+
+                              <div>
+                                    <dt>2020.01.01</dt>
+                                    <dd>新年明けましておめでとうございます</dd>
+                              </div>
+                        </dl>
+
+                              <a href="#">
+                                    <div class="buttan">READ MORE</div>
+                              </a>
+
+                  </div>
+            </div>
+
+
+
+
+
+            <!--コンタクト--------------------------------------------------------->
+            <div id="contact" class="scroll-fadeIn">
+                  <div class="left">
+                        <h1>CONTACT</h1>
+                        <p>
+                              制作の依頼、取材の依頼、IRや採用についての連絡・お問い合わせはコンタクトページから承っております。<br>
+                              まずはお気軽にご連絡ください。担当者から改めて返信いたします。
+                        </p>
+                        <a href="contact.html">
+                              <div class="buttan">READ MORE</div>
+                        </a>
+                  </div>
+                  <div class="right"><img src="images/recruit-img.jpg"></div>
+            </div>
+
+            <!--フッター--------------------------------------------------------->
+            <div id="footer">
+                  <p>©2018 DIGSMILE INC.</p>
+
+            </div>
+
+
+      </body>
+</html>
